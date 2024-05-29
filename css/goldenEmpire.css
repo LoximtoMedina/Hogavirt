@@ -1,0 +1,300 @@
+/*Reset De Valores*/
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/*Configuraciones Generales*/
+body{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+
+    font-family: "Bitter";
+}
+
+.pagerow{
+    height: 100vh;
+    width: 100%;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.content{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    align-items: space-around;
+
+    border: 3px solid #e3cf1c;
+}
+
+.row{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.anchor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+p{
+    text-align: justify;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 0px 5%;
+}
+
+a{
+    text-align: center;
+    text-decoration: none;
+
+    height: 2vh;
+    width: 10vw;
+}
+
+ul{
+    list-style: none;
+}
+
+/*Golden Empire*/
+    #goldenempire > .row:nth-child(1){
+        height: 30%;
+        width: 100%;
+
+        flex-flow: column wrap;
+
+        background: #922031;
+        font-weight: bolder;
+        color: whitesmoke;
+    }
+
+    #goldenempire > .row:nth-child(1) > .column{
+        height: 100%;
+        width: 50%;
+
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: flex-start;
+
+        padding: 0 0 3% 3%;
+    }
+
+    #goldenempire > .row:nth-child(1) > nav{
+        height: 100%;
+        width: 50%;
+
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        padding: 0 3% 3% 0%;
+    }
+
+    #goldenempire > .row:nth-child(2){
+        height: 70%;
+        width: 100%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #goldenempire > .row:nth-child(2) > .content{
+        height: 60%;
+        width: 40%;     
+    }
+
+    /*Golden Empire - Habitaciones*/
+        #goldenempirerooms > .content{
+            height: 70%;
+            width: 70%;
+
+            flex-flow: column wrap;
+        }
+
+        #goldenempirerooms > .content > h1{
+            height: 20%;
+            width: 100%;
+        }
+
+        #goldenempirerooms > .content > .sliderbox{
+            height: 80%;
+            width: 100%;
+
+            overflow: hidden;
+        }
+
+        #goldenempirerooms > .content > .sliderbox > ul{
+            display: flex;
+            width: 500%;
+
+            animation: slide 20s infinite ease-in-out;
+        }
+
+        #goldenempirerooms > .content > .sliderbox > ul > li{
+            width: 100%;
+            list-style: none;
+
+            padding: 1%;
+        }
+
+    /*Golden Empire - Servicios*/
+        #goldenempireservices > .content{
+            height: 80%;
+            width: 80%;
+            
+            display: grid;
+            grid-template: repeat(5, 1fr) / repeat(6, 1fr);
+        }
+
+        #goldenempireservices > .content > h2{
+            grid-column: span 6;
+            grid-row: span 1;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #goldenempireservices > .content > .info{
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+
+        #goldenempireservices > .content > .info:nth-child(5), #goldenempireservices > .content > .info:nth-child(6){
+            grid-column: span 3;
+        }
+
+/*Espacio Para Reservar*/
+#reserve{
+    background: #353636;
+    color: whitesmoke;
+}
+
+#reserve > h2{
+    height: 20%;
+    width: 100%;
+}
+
+#reserve > form{
+    height: 80%;
+    width: 80%;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: space-around;
+
+    padding: 4%;
+}
+
+#reserve > form > .row{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#reserve > form > .row > .column{
+    flex-basis: 50%;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: space-around;
+}
+
+textarea{
+    resize: vertical;
+}
+
+/*Footer*/
+footer{
+    height: 20vh;
+    width: 100%;
+
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: space-around;
+
+    background: #922031;
+    font-weight: bolder;
+    color: whitesmoke;
+}
+
+/*Animaciones*/
+    /*Animación de los carruseles*/
+    @keyframes slide{
+        0%{
+            margin-left: 0;
+        }
+        15%{
+            margin-left: 0;
+        }
+        20%{
+            margin-left: -100%;
+        }
+        35%{
+            margin-left: -100%;
+        }
+        40%{
+            margin-left: -200%;
+        }
+        55%{
+            margin-left: -200%;
+        }
+        60%{
+            margin-left: -300%;
+        }
+        75%{
+            margin-left: -300%;
+        }
+        80%{
+            margin-left: -400%;
+        }
+        95%{
+            margin-left: -400%;
+        }
+        100%{
+            margin-left: 0%;
+        }
+    }
