@@ -1,0 +1,610 @@
+/*Reset De Valores*/
+    *{
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+    }
+
+/*Configuraciones Generales*/
+    body{
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+
+        font-family: "Open Sans";
+    }
+
+    .PageRow{
+        height: 100vh;
+        width: 100%;
+
+        overflow: hidden;
+    }
+
+    .Content{
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .Row{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    h1{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        font-size: 40pt;
+    }
+
+    h2{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        font-size: 30pt;
+
+    }
+
+    h3{
+        width: 100%;
+
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        font-size: 20pt;
+        padding: 0 0 5% 5%;
+
+        color: #257E9C;
+    }
+
+    p{
+        text-align: justify;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        padding: 0px 5%;
+
+        font-size: 11pt;
+    }
+
+    a{
+        height: 2vh;
+        width: 15vw;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        text-decoration: none;
+    }
+
+    .HTMLAnchor{
+        height: 0;
+        width: 0;
+    }
+
+    ul{
+        list-style: none;
+    }
+
+/*Página Principal*/
+    /*Fondo*/
+    #Header{
+        display: flex;
+        flex-flow: column wrap;
+
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        background: url(../images/BackgroundHogavirt.jpg);
+        background-size: cover;
+    }
+
+    #Header > .Filter{
+        height: 100%;
+        width: 100%;
+
+        backdrop-filter: blur(10px) grayscale(1);
+    }
+
+    /*Barra de navegación*/
+    #Header nav{
+        height: 15%;
+        width: 100%;
+
+        backdrop-filter: blur(10px);
+
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #Header nav > a{
+        height: 100%;
+
+        font-weight: bold;
+        color: white;
+    }
+
+    /*SliderBox*/
+        #Header nav > a > .SliderBox{
+            height: 100%;
+            width: 100%;
+
+            overflow: hidden;
+        }
+
+        #Header nav > a > .SliderBox > ul{
+            height: 300%;
+
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+
+            animation: Slide 5s infinite ease-in-out;
+        }
+
+        #Header nav > a > .SliderBox > ul > li{
+            height: 100%;
+
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            align-items: center;
+
+            padding: 1%;
+        }
+
+    /*Título*/
+    #Header .Row{
+        height: 80%;
+        width: 100%;
+
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-around;
+    }
+
+    #Header .Row > .Content{
+        width: 100%;
+
+        background: #408EA8;
+        color: white;
+
+        padding: 2.5%;
+
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-around;
+    }
+
+/*Hogavirt - About Us*/
+    #AboutUs{
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #AboutUs > .Content:nth-child(1){
+        height: 100%;
+        width: 30%;
+
+        position: relative;
+        perspective: 1000;
+
+        overflow: hidden;
+    }
+
+    .Cube{
+        position: relative;
+        top: -10%;
+
+        width: 80%;
+
+        transform-style: preserve-3d;
+
+        animation: spin 4s infinite linear;
+        transition: all 1s linear;
+    }
+
+    .Cara{
+        position:absolute;
+        width:31vh;
+        height:30vh;
+
+        transition: all 1s linear;
+      }
+
+    .CaraD{
+        background: url(../images/LogoImland.png);
+        background-size: cover;
+        transform: translateZ(-100px) rotateY(180deg);
+    }
+
+    .CaraC{
+        background: url(../images/LogoDreamlandParadise.png);
+        background-size: cover;
+        transform:rotateY(-270deg) translateX(100px);
+        transform-origin: top right;
+    }
+
+    .CaraB{
+        background: url(../images/LogoGoldenEmpire.png);
+        background-size: cover;
+        transform:rotateY(270deg) translateX(-100px);
+        transform-origin: center left;
+    }
+      
+    .CaraA{
+        background: url(../images/LogoHogavirt.png);
+        background-size: cover;
+        transform: translateZ(100px);
+    }
+
+    #AboutUs > .Content:nth-child(2){
+        height: 100%;
+        width: 50%;
+    }
+
+/*Hogavirt - Services*/
+    #Services{
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        justify-content: center;
+
+        background: #E4EFF3;
+    }
+
+    #Services > .Content:nth-child(1){
+        height: 100%;
+        width: 50%;
+    }
+
+    #Services > .Content:nth-child(2){
+        height: 100%;
+        width: 40%;
+
+        background-color: #257E9C;
+    }
+
+/*Hogavirt - History*/
+    #History{
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #History > .Content:nth-child(1){
+        height: 100%;
+        width: 40%;
+
+        background-color: #257E9C;
+    }
+
+    #History > .Content:nth-child(2){
+        height: 100%;
+        width: 50%;
+    }
+
+/*Hogavirt - Goals*/
+    #Goals{
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        justify-content: center;
+
+        background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='40' height='20' patternTransform='scale(1) rotate(90)'><rect x='0' y='0' width='100%' height='100%' fill='hsla(196, 38%, 92%, 1)'/><path d='M40 0L20-10V0l20 10zm0 10L20 0v10l20 10zm0 10L20 10v10l20 10zM0 20l20-10v10L0 30zm0-10L20 0v10L0 20zM0 0l20-10V0L0 10z'  stroke-width='1.5' stroke='hsla(15, 45%, 45%, 1)' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,-40)' fill='url(%23a)'/></svg>");
+    }
+
+    #Goals > .Content{
+        height: 80%;
+        width: 30%;
+
+        padding: 3%;
+
+        background: #257E9C;
+        color: white;
+    }
+
+    #Goals > .Content:nth-child(2) > ul{
+        list-style-type: square;
+    }
+
+    #Goals > .Content > h3{
+        color: white;
+
+        justify-content: center;
+    }
+
+/*Hogavirt - Hotels*/
+    #Hotels{
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        justify-content: center;
+
+        background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='58' height='100.23' patternTransform='scale(2) rotate(0)'><rect x='0' y='0' width='100%' height='100%' fill='hsla(196, 38%, 92%, 1)'/><path d='M12.127 73.813l.013 5.643 4.893-2.81zm-6.01-3.47l16.928 9.773-16.93 9.777zm-6.02-3.476l28.967 16.725L.13 100.262zm16.97 23.616l-.015 5.643-4.893-2.81zm6.01-3.472L6.148 96.786l16.93 9.776zM.128 100.261l28.935 16.669m16.874-23.67l-.013-5.644-4.894 2.81zm6.01 3.47L35.02 86.956l16.931-9.775zM29 83.482l28.936-16.669.032 33.393m-28.904 2.834l4.881-2.834-4.88-2.832zm0 6.94V90.433l16.932 9.773zm0 6.952V83.482l28.904 16.724zM58 13.915l-4.882 2.833L58 19.582zm0-6.94v19.548l-16.932-9.774zm0-6.951v33.448L29.096 16.748m0-13.89l4.88-2.833-4.88-2.833zm0 6.94V-9.749L46.026.025zm0 6.95v-33.449L58 .024zM16.94 23.696l-4.894-2.81-.014 5.643zm6.01-3.47L6.02 29.998V10.448zM0 33.472L.033.08 28.97 16.75m-5.99-29.92L6.053-3.393l16.93 9.776zM28.97 16.75L29-16.644.033.08m40.966 23.615l.013 5.643 4.893-2.81zm-6.01-3.47l16.928 9.774-16.93 9.775zm22.947 13.248L29 50.143l-.031-33.394M16.97 43.197l-.013-5.643-4.894 2.81zm6.01 3.47L6.053 36.894l16.93-9.776zM29 50.143L.032 33.419l28.936-16.67m16.937 57.008l-4.893-2.81-.014 5.644zm6.01-3.47L34.988 80.06v-19.55zM29 64.035l-4.88 2.832L29 69.7zm0-6.942v19.549L12.07 66.867zM.097 66.867L29 50.143v33.449m16.938-43.228l-.013 5.644-4.894-2.811zm6.01-3.47L35.02 46.667l16.931 9.777zM29 50.143l28.936 16.67.032-33.394M.097 52.975l4.88-2.832-4.88-2.833zm0 6.942V40.368l16.931 9.775zm0 6.95V33.42'  stroke-linecap='square' stroke-width='1' stroke='hsla(15, 45%, 45%, 1)' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(-106,-0.92)' fill='url(%23a)'/></svg>")
+    }
+
+    #Hotels > .Content{
+        height: 80%;
+        width: 30%;
+
+        background: #257E9C;
+        color: white;
+        font-weight: bold;
+
+        border-radius: 10px;
+    }
+
+    #Hotels > .Content h3{
+        color: white;
+
+        justify-content: center;
+    }
+
+    #Hotels > .Content a{
+        height: 10%;
+        width: 80%;
+
+        margin: 10%;
+        border-radius: 10px;
+        color: white;
+    }
+
+    #Hotels > #DreamlandParadise{
+        background: url(../images/BackgroundDreamlandParadise.jpg);
+        background-size: cover;
+    }
+
+    #Hotels > #DreamlandParadise a{
+        background-color: rgba(126, 252, 0, 0.671);
+    }
+
+    #Hotels > #GoldenEmpire{
+        background: url(../images/BackgroundGoldenEmpire.jpg);
+        background-size: cover;
+    }
+
+    #Hotels > #GoldenEmpire a{
+        background-color: #922031b7;
+    }
+
+    #Hotels > #Imland{
+        background: url(../images/BackgroundImland.jpg);
+        background-size: cover;
+    }
+
+    #Hotels > #Imland a{
+        background-color: #795632b7;
+    }
+
+    #Hotels > .Content > .Filter{
+        height: 100%;
+        width: 100%;
+
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: space-around;
+        justify-content: center;
+
+        backdrop-filter: blur(2px) grayscale(1) opacity(1);
+    }
+
+    #Hotels > .Content:hover{
+        animation: scale 1s forwards ease-out;
+    }
+
+    #Hotels > .Content > .Filter:hover{
+        animation: colorrevive 1s forwards ease-out;
+    }
+
+    #Hotels > #DreamlandParadise:hover a{
+        animation: botonrevive1 1s forwards ease-out;
+    }
+
+    #Hotels > #GoldenEmpire:hover a{
+        animation: botonrevive2 1s forwards ease-out;
+    }
+
+    #Hotels > #Imland:hover a{
+        animation: botonrevive3 1s forwards ease-out;
+    }
+
+/*Hogavirt - Contact*/
+    #Contact{
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #Contact > .Content:nth-child(1){
+        height: 100%;
+        width: 50%;
+    }
+
+    #Contact > .Content:nth-child(1) > form{
+        height: 60%;
+        width: 100%;
+
+        padding-left: 5%;
+
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: space-around;
+        justify-content: space-around;
+    }
+
+    #Contact > .Content:nth-child(1) > form > input{
+        padding: 1.5%;
+    }
+
+    #Contact > .Content:nth-child(1) > form > label{
+        font-weight: bolder;
+        padding: 1.5% 0;
+    }
+
+    #Contact > .Content:nth-child(1) > form > textarea{
+        padding: 1.5%;
+        
+        resize: vertical;
+    }
+
+    #Contact > .Content:nth-child(1) > form > button{
+        padding: 1%;
+        margin-top: 1.5%;
+
+        border: none;
+        border-radius: 10px;
+        
+        background: #257E9C;
+        font-weight: bolder;
+        color: white;
+    }
+
+    #Contact > .Content:nth-child(1) > form > button:hover{
+        background: #257e9c91;
+        font-weight: bolder;
+        color: white;
+    }
+
+    #Contact > .Content:nth-child(2){
+        height: 100%;
+        width: 30%;
+
+        position: relative;
+        perspective: 1000;
+
+        overflow: hidden;
+    }
+
+/*Footer*/
+    footer{
+        height: 20vh;
+        width: 100%;
+
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-content: space-around;
+
+        background: #257E9C;
+        font-weight: bold;
+        color: #E4EFF3;
+    }
+
+    footer > a{
+        color: #E4EFF3;
+    }
+
+
+/*Animaciones*/
+    /*Animación de los carruseles*/
+        @keyframes Slide{
+            0%{
+                margin-top: 0;
+            }
+
+            15%{
+                margin-top: 0;
+            }
+
+            45%{
+                margin-top: -50%;
+            }
+
+            60%{
+                margin-top: -50%;
+            }
+            
+            75%{
+                margin-top: -100%;
+            }
+
+            85%{
+                margin-top: -100%;
+            }
+
+            100%{
+                margin-top: 0%;
+            }
+        }
+    
+    /*Smooth Scroll*/
+        html {
+            scroll-behavior: smooth;
+        }
+
+    /*Color Revive*/
+        @keyframes colorrevive{
+            from{
+                backdrop-filter: blur(2px) grayscale(1);
+            }
+            to{
+                backdrop-filter: blur(0.5px) grayscale(0.5);
+            }
+        }
+
+        @keyframes botonrevive1{
+            from{
+                background: rgba(126, 252, 0, 0.671);
+            }
+            to{
+                background: rgb(126, 252, 0);
+            }
+        }
+
+        @keyframes botonrevive2{
+            from{
+                background: #922031b7;
+            }
+            to{
+                background: #922031;
+            }
+        }
+
+        @keyframes botonrevive3{
+            from{
+                background: #795632b7;
+            }
+            to{
+                background: #795632;
+            }
+        }
+
+        @keyframes spin {
+            from {
+                transform: rotateY(0); 
+            }
+
+            to{
+                transform: rotateY(360deg); 
+            }
+          }
+
+    /*Scale*/
+        @keyframes scale{
+            from{
+                transform: scale(1);
+            }
+
+            to{
+                transform: scale(1.01);
+            }
+        }
