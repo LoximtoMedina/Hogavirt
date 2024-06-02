@@ -121,11 +121,11 @@ a{
             opacity: 0;
         }
 
-        a:nth-child(1){
+        a:nth-child(2){
             color: #e3cf1c;
         }
         
-        div{
+        .Logo{
             height: 10%;
             width: 50%;
 
@@ -135,8 +135,21 @@ a{
 
             opacity: 0;
         }
+
+        .Menu{
+            position: absolute;
+            top: 50%;
+            
+            color: white;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    
     }
 
+    
     #Header > nav:hover{
         height: 100%;
         width: 20%;
@@ -152,7 +165,7 @@ a{
             color: #6b6b6b;
         }
 
-        a:hover:nth-child(1){
+        a:hover:nth-child(2){
             color: #bbab1e;
         }
 
@@ -160,6 +173,10 @@ a{
             opacity: 100;
 
             transition: all 0.8s;
+        }
+
+        .Menu{
+            display: none;
         }
     }
 
@@ -402,9 +419,20 @@ a{
             }
 
             input, select{
+                outline: none;
                 border: none;
-
+                
+                margin: 1%;
                 padding: 1.5%;
+
+                border-bottom: 1px solid #bbab1e;
+                background-color: rgba(255, 255, 255, 0);
+
+                color: rgb(202, 199, 199);
+            }
+
+            input::placeholder, textarea::placeholder{
+                color: rgb(202, 199, 199);
             }
 
             button{
@@ -432,6 +460,11 @@ a{
             padding: 1.5%;
 
             resize: vertical;
+
+            outline: none;
+            border: none;
+            border-bottom: 1px solid #bbab1e;
+            background-color: rgba(255, 255, 255, 0);
         }
     }
 
