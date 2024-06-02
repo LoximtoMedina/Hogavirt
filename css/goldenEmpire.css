@@ -18,6 +18,8 @@ body{
 .PageRow{
     height: 100vh;
     width: 100%;
+
+    overflow: hidden;
 }
 
 .Content{
@@ -82,10 +84,6 @@ a{
     width: 10vw;
 }
 
-ul{
-    list-style: none;
-}
-
 .HTMLAnchor{
     height: 0;
     width: 0;
@@ -94,9 +92,7 @@ ul{
 /*Golden Empire*/
     #Header{
         display: flex;
-        flex-flow: column nowrap;
-        justify-content: center;
-        align-items: center;
+        align-items: column wrap;
 
         background: url(../images/BackgroundGoldenEmpire.jpg);
         background-size: cover;
@@ -104,40 +100,73 @@ ul{
     }
 
     #Header > nav{
-        height: 10%;
-        width: 100%;
-
-        backdrop-filter: blur(4px) grayscale(1);
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    #Header > nav > div{
-        height: 80%;
-        width: 5%;
-
-        margin-right: 2%;
-
-        background: url(../images/LogoGoldenEmpirePNG.png) no-repeat;
-        background-size: contain;
-    }
-
-    #Header > nav > a{
         height: 100%;
+        width: 4%;
 
-        text-decoration: none;
-        font-weight: bolder;
-        color: #e3cf1c;
+        overflow: hidden;
+        background: #353636;
 
         display: flex;
         flex-flow: column nowrap;
-        align-items: flex-end;
-        justify-content: center;
+        align-items: center;
+        justify-content: space-around;
+
+        transition: all 0.5s;
+
+        a{
+            text-decoration: none;
+            font-weight: bold;
+            color: #bbbbbb;
+            
+            opacity: 0;
+        }
+
+        a:nth-child(1){
+            color: #e3cf1c;
+        }
+        
+        div{
+            height: 10%;
+            width: 50%;
+
+            background: url(../images/LogoGoldenEmpirePNG.png) no-repeat;
+            background-size: contain;
+            background-position: center;
+
+            opacity: 0;
+        }
     }
 
+    #Header > nav:hover{
+        height: 100%;
+        width: 20%;
+
+        background: #5b2c2c;
+
+        a{
+            opacity: 100;
+
+        }
+
+        a:hover{
+            color: #6b6b6b;
+        }
+
+        a:hover:nth-child(1){
+            color: #bbab1e;
+        }
+
+        div{
+            opacity: 100;
+
+            transition: all 0.8s;
+        }
+    }
+
+    
+
     #Header > .Filter{
-        height: 90%;
+        height: 100%;
         width: 100%;
 
         backdrop-filter: blur(4px) grayscale(1);
@@ -145,182 +174,265 @@ ul{
         display: flex;
         align-items: center;
         justify-content: center;
-    }
 
-    #Header > .Filter > .Row{
-        height: 20%;
-        width: 100%;
+        h1{
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 52pt;
 
-        justify-content: space-between;
+            color: #922031;
+        }
 
-        background: #922031;
-        color: #e3cf1c;
+        p{
+            font-weight: bolder;
+
+            color: #e3cf1c;
+        }
     }
 
     /*Golden Empire - AboutUs*/
         #AboutUs{
-            display: flex;
-            flex-flow: column wrap;
-            justify-content: center;
-            align-items: center;
-        }
+            background: url(../images/Anexo2.jpeg);
+            background-size: cover;
+            background-position: center;
+            
+            .Filter{
+                height: 100%;
+                width: 100%;
 
-        #AboutUs > .Content:nth-child(1){
-            height: 100%;
-            width: 50%;
+                background: #252525e0;
 
-            background: #353636 url();
-        }
+                display: flex;
+                flex-flow: column wrap;
+                justify-content: center;
+                align-items: center;
 
+                .Content:nth-child(1){
+                    height: 2%;
+                    width: 35%;
 
-        #AboutUs > .Content:nth-child(2){
-            height: 80%;
-            width: 50%;
+                    border-top: 4px solid #e3cf1c;
+                    border-bottom: 2px solid #e3cf1c;
+                }
+                .Content:nth-child(2){
+                    height: 70%;
+                    width: 80%;
+                    
+                    color: white;
+
+                    p{
+                        text-align: center;
+                    }
+                }
+                .Content:nth-child(3){
+                    height: 2%;
+                    width: 35%;
+
+                    border-top: 2px solid #e3cf1c;
+                    border-bottom: 4px solid #e3cf1c;
+                }
+            }
         }
 
     /*Golden Empire - Habitaciones*/
         #GoldenEmpireRooms{
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            background: url(../images/Anexo3.jpg);
+            background-size: cover;
 
-            background:
-            radial-gradient(35.36% 35.36% at 100% 25%,#0000 66%,#e3cf1c 68% 70%,#0000 72%) 15px 15px/calc(2*15px) calc(2*15px),
-            radial-gradient(35.36% 35.36% at 0    75%,#0000 66%,#e3cf1c 68% 70%,#0000 72%) 15px 15px/calc(2*15px) calc(2*15px),
-            radial-gradient(35.36% 35.36% at 100% 25%,#0000 66%,#e3cf1c 68% 70%,#0000 72%) 0 0/calc(2*15px) calc(2*15px),
-            radial-gradient(35.36% 35.36% at 0    75%,#0000 66%,#e3cf1c 68% 70%,#0000 72%) 0 0/calc(2*15px) calc(2*15px),
-            repeating-conic-gradient(#922031 0 25%,#0000 0 50%) 0 0/calc(2*15px) calc(2*15px),
-            radial-gradient(#0000 66%,#e3cf1c 68% 70%,#0000 72%) 0 calc(15px/2)/15px 15px
-            #922031;      
-        }
+            border-top: 10px solid #252525;
 
-        #GoldenEmpireRooms > .Content{
-            height: 70%;
-            width: 70%;
+            .Filter{
+                height: 100%;
+                width: 100%;
 
-            background: #353636d0;
-            box-shadow: 0px 0px 20px #353636d0;
-            border-radius: 10px;
+                background-color: #5b2c2cd0;
 
-            color: white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
 
-            flex-flow: column wrap;
-        }
+                .Content{
+                    height: 70%;
+                    width: 70%;
 
-        #GoldenEmpireRooms > .Content > h1{
-            height: 20%;
-            width: 100%;
-        }
+                    background: #353636d0;
+                    box-shadow: 0px 0px 20px #353636d0;
+                    border-radius: 10px;
 
-        #GoldenEmpireRooms > .Content > .SliderBox{
-            height: 80%;
-            width: 100%;
+                    color: white;
 
-            overflow: hidden;
-        }
+                    flex-flow: column wrap;
 
-        #GoldenEmpireRooms > .Content > .SliderBox > ul{
-            display: flex;
-            width: 500%;
+                    h1{
+                        height: 20%;
+                        width: 100%;
+                    }
 
-            animation: slide 20s infinite ease-in-out;
-        }
+                    .SliderBox{
+                        height: 80%;
+                        width: 100%;
 
-        #GoldenEmpireRooms > .Content > .SliderBox > ul > li{
-            width: 100%;
-            list-style: none;
+                        overflow: hidden;
 
-            padding: 1%;
+                        > ul{
+                            width: 500%;
+                            height: 100%;
+
+                            display: flex;
+                            list-style: none;
+
+                            animation: slide 20s infinite ease-in-out;
+
+                            > li{
+                                width: 100%;
+                                height: 100%;
+
+                                padding: 1%;
+                                
+                                ul > li{
+                                    padding-left: 5%;
+                                }
+                            }
+                        }
+                    }
+
+                }
+            }
         }
 
     /*Golden Empire - Servicios*/
         #GoldenEmpireServices{
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            background: url(../images/BackgroundGoldenEmpire2.jpg);
+            background-size: cover;
 
-            background:
-            radial-gradient(35.36% 35.36% at 100% 25%,#0000 66%,#e3cf1c 68% 70%,#0000 72%) 15px 15px/calc(2*15px) calc(2*15px),
-            radial-gradient(35.36% 35.36% at 0    75%,#0000 66%,#e3cf1c 68% 70%,#0000 72%) 15px 15px/calc(2*15px) calc(2*15px),
-            radial-gradient(35.36% 35.36% at 100% 25%,#0000 66%,#e3cf1c 68% 70%,#0000 72%) 0 0/calc(2*15px) calc(2*15px),
-            radial-gradient(35.36% 35.36% at 0    75%,#0000 66%,#e3cf1c 68% 70%,#0000 72%) 0 0/calc(2*15px) calc(2*15px),
-            repeating-conic-gradient(#922031 0 25%,#0000 0 50%) 0 0/calc(2*15px) calc(2*15px),
-            radial-gradient(#0000 66%,#e3cf1c 68% 70%,#0000 72%) 0 calc(15px/2)/15px 15px
-            #922031;
-        }
+            border-top: 10px solid #252525;
 
-        #GoldenEmpireServices > .Content{
-            height: 80%;
-            width: 80%;
-            
-            background: #353636d0;
-            box-shadow: 0px 0px 20px #353636d0;
-            border-radius: 10px;
+            .Filter{
+                height: 100%;
+                width: 100%;
 
-            display: grid;
-            grid-template: repeat(5, 1fr) / repeat(6, 1fr);
-        }
+                background: #5c562bd0;
+                backdrop-filter: grayscale(1);
 
-        #GoldenEmpireServices > .Content > h2{
-            grid-column: span 6;
-            grid-row: span 1;
+                display: flex;
+                align-items: center;
+                justify-content: center;
 
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+                .Content{
+                    height: 80%;
+                    width: 80%;
+                    
+                    background: #353636d0;
+                    box-shadow: 0px 0px 20px #353636d0;
+                    border-radius: 10px;
 
-        #GoldenEmpireServices > .Content > .Info{
-            grid-column: span 2;
-            grid-row: span 2;
-        }
+                    display: grid;
+                    grid-template: repeat(5, 1fr) / repeat(6, 1fr);
 
-        #GoldenEmpireServices > .Content > .Info:nth-child(5), #GoldenEmpireServices > .Content > .Info:nth-child(6){
-            grid-column: span 3;
+                    color: white;
+
+                    h2{
+                        grid-column: span 6;
+                        grid-row: span 1;
+
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+
+                    .Info{
+                        grid-column: span 2;
+                        grid-row: span 2;
+
+                        ul{
+                            li:nth-child(even){
+                                list-style: none;
+                            }
+                        }
+                    }
+
+                    .Info:nth-child(5), .Info:nth-child(6){
+                        grid-column: span 3;
+                    }
+                }
+            }
         }
 
 /*Espacio Para Reservar*/
     #Reserve{
+        height: auto;
+
         background: #353636;
         color: whitesmoke;
 
         background:
-        radial-gradient(35.36% 35.36% at 100% 25%,#0000 66%,#e3cf1c 68% 70%,#0000 72%) 15px 15px/calc(2*15px) calc(2*15px),
-        radial-gradient(35.36% 35.36% at 0    75%,#0000 66%,#e3cf1c 68% 70%,#0000 72%) 15px 15px/calc(2*15px) calc(2*15px),
-        radial-gradient(35.36% 35.36% at 100% 25%,#0000 66%,#e3cf1c 68% 70%,#0000 72%) 0 0/calc(2*15px) calc(2*15px),
-        radial-gradient(35.36% 35.36% at 0    75%,#0000 66%,#e3cf1c 68% 70%,#0000 72%) 0 0/calc(2*15px) calc(2*15px),
-        repeating-conic-gradient(#922031 0 25%,#0000 0 50%) 0 0/calc(2*15px) calc(2*15px),
-        radial-gradient(#0000 66%,#e3cf1c 68% 70%,#0000 72%) 0 calc(15px/2)/15px 15px #922031;
+        radial-gradient(35.36% 35.36% at 100% 25%,#0000 66%,#5c562b 68% 70%,#0000 72%) 28px 28px/calc(2*28px) calc(2*28px),
+        radial-gradient(35.36% 35.36% at 0    75%,#0000 66%,#5c562b 68% 70%,#0000 72%) 28px 28px/calc(2*28px) calc(2*28px),
+        radial-gradient(35.36% 35.36% at 100% 25%,#0000 66%,#5c562b 68% 70%,#0000 72%) 0 0/calc(2*28px) calc(2*28px),
+        radial-gradient(35.36% 35.36% at 0    75%,#0000 66%,#5c562b 68% 70%,#0000 72%) 0 0/calc(2*28px) calc(2*28px),
+        repeating-conic-gradient(#5b2c2c 0 25%,#0000 0 50%) 0 0/calc(2*28px) calc(2*28px),
+        radial-gradient(#0000 66%,#5c562b 68% 70%,#0000 72%) 0 calc(28px/2)/28px 28px
+        #5b2c2c;
+
+        border-top: 10px solid #252525;
 
         display: flex;
         flex-flow: column nowrap;
         justify-content: center;
         align-items: center;
-    }
 
-    #Reserve > h2{
-        height: 20%;
-        width: 100%;
+        h2{
+            height: 20vh;
+            width: 100%;
+        }
 
-        background: #353636d0;
-    }
+        form{
+            height: 80%;
+            width: 80%;
+    
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: space-between;
+            align-items: space-evenly;
+    
+            padding: 0% 15% 4% 15%;
 
-    #Reserve > form{
-        height: 80%;
-        width: 100%;
+            label{
+                font-weight: bold;
+                padding: 1.5% 0;
+            }
 
-        background: #353636d0;
+            input, select{
+                border: none;
 
-        display: flex;
-        flex-flow: column nowrap;
-        justify-content: space-between;
-        align-items: space-evenly;
+                padding: 1.5%;
+            }
 
-        padding: 4% 15%;
-    }
+            button{
+                padding: 1%;
+                margin-top: 3%;
 
-    textarea{
-        resize: vertical;
+                border: none;
+                border-radius: 10px;
+                
+                background: #252525;
+                font-weight: bolder;
+                color: white;
+
+                transition: all 0.5s;
+            }
+
+            button:hover{
+                background: white;
+                font-weight: bolder;
+                color: #252525;
+            }
+        }
+
+        textarea{
+            padding: 1.5%;
+
+            resize: vertical;
+        }
     }
 
 /*Footer*/
@@ -333,14 +445,15 @@ ul{
         align-items: center;
         justify-content: space-around;
 
-        background: #922031;
+        background: #252525;
+        
         font-weight: bolder;
-        color: #e3cf1c;
-    }
+        color: white;
 
-    footer > a{
-        text-decoration: none;
-        color: #e3cf1c;
+        a{
+            text-decoration: none;
+            color: white;
+        }
     }
 
 /*Animaciones*/
