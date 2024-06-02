@@ -15,39 +15,26 @@ body{
     font-family: "Bitter";
 }
 
-.pagerow{
+.PageRow{
     height: 100vh;
     width: 100%;
-
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: center;
 }
 
-.content{
+.Content{
     display: flex;
     flex-flow: column wrap;
     justify-content: space-around;
     align-items: space-around;
-
-    border: 3px solid #e3cf1c;
 }
 
-.row{
+.Row{
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
 }
 
-.info{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.anchor{
+.Info{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -57,18 +44,24 @@ h1{
     display: flex;
     justify-content: center;
     align-items: center;
+
+    padding-left: 5%;
 }
 
 h2{
     display: flex;
     justify-content: center;
     align-items: center;
+
+    color: #e3cf1c;
 }
 
 h3{
     display: flex;
     justify-content: center;
     align-items: center;
+
+    color:#e3cf1c;
 }
 
 p{
@@ -93,83 +86,147 @@ ul{
     list-style: none;
 }
 
+.HTMLAnchor{
+    height: 0;
+    width: 0;
+}
+
 /*Golden Empire*/
-    #goldenempire > .row:nth-child(1){
-        height: 30%;
+    #Header{
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+
+        background: url(../images/BackgroundGoldenEmpire.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+
+    #Header > nav{
+        height: 10%;
         width: 100%;
 
-        flex-flow: column wrap;
+        backdrop-filter: blur(4px) grayscale(1);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #Header > nav > div{
+        height: 80%;
+        width: 5%;
+
+        margin-right: 2%;
+
+        background: url(../images/LogoGoldenEmpirePNG.png) no-repeat;
+        background-size: contain;
+    }
+
+    #Header > nav > a{
+        height: 100%;
+
+        text-decoration: none;
+        font-weight: bolder;
+        color: #e3cf1c;
+
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: flex-end;
+        justify-content: center;
+    }
+
+    #Header > .Filter{
+        height: 90%;
+        width: 100%;
+
+        backdrop-filter: blur(4px) grayscale(1);
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #Header > .Filter > .Row{
+        height: 20%;
+        width: 100%;
+
+        justify-content: space-between;
 
         background: #922031;
-        font-weight: bolder;
-        color: whitesmoke;
+        color: #e3cf1c;
     }
 
-    #goldenempire > .row:nth-child(1) > .column{
-        height: 100%;
-        width: 50%;
+    /*Golden Empire - AboutUs*/
+        #AboutUs{
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: center;
+            align-items: center;
+        }
 
-        display: flex;
-        flex-flow: column wrap;
-        justify-content: center;
-        align-items: flex-start;
+        #AboutUs > .Content:nth-child(1){
+            height: 100%;
+            width: 50%;
 
-        padding: 0 0 3% 3%;
-    }
+            background: #353636 url();
+        }
 
-    #goldenempire > .row:nth-child(1) > nav{
-        height: 100%;
-        width: 50%;
 
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-
-        padding: 0 3% 3% 0%;
-    }
-
-    #goldenempire > .row:nth-child(2){
-        height: 70%;
-        width: 100%;
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    #goldenempire > .row:nth-child(2) > .content{
-        height: 60%;
-        width: 40%;     
-    }
+        #AboutUs > .Content:nth-child(2){
+            height: 80%;
+            width: 50%;
+        }
 
     /*Golden Empire - Habitaciones*/
-        #goldenempirerooms > .content{
+        #GoldenEmpireRooms{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background:
+            radial-gradient(35.36% 35.36% at 100% 25%,#0000 66%,#e3cf1c 68% 70%,#0000 72%) 15px 15px/calc(2*15px) calc(2*15px),
+            radial-gradient(35.36% 35.36% at 0    75%,#0000 66%,#e3cf1c 68% 70%,#0000 72%) 15px 15px/calc(2*15px) calc(2*15px),
+            radial-gradient(35.36% 35.36% at 100% 25%,#0000 66%,#e3cf1c 68% 70%,#0000 72%) 0 0/calc(2*15px) calc(2*15px),
+            radial-gradient(35.36% 35.36% at 0    75%,#0000 66%,#e3cf1c 68% 70%,#0000 72%) 0 0/calc(2*15px) calc(2*15px),
+            repeating-conic-gradient(#922031 0 25%,#0000 0 50%) 0 0/calc(2*15px) calc(2*15px),
+            radial-gradient(#0000 66%,#e3cf1c 68% 70%,#0000 72%) 0 calc(15px/2)/15px 15px
+            #922031;      
+        }
+
+        #GoldenEmpireRooms > .Content{
             height: 70%;
             width: 70%;
+
+            background: #353636d0;
+            box-shadow: 0px 0px 20px #353636d0;
+            border-radius: 10px;
+
+            color: white;
 
             flex-flow: column wrap;
         }
 
-        #goldenempirerooms > .content > h1{
+        #GoldenEmpireRooms > .Content > h1{
             height: 20%;
             width: 100%;
         }
 
-        #goldenempirerooms > .content > .sliderbox{
+        #GoldenEmpireRooms > .Content > .SliderBox{
             height: 80%;
             width: 100%;
 
             overflow: hidden;
         }
 
-        #goldenempirerooms > .content > .sliderbox > ul{
+        #GoldenEmpireRooms > .Content > .SliderBox > ul{
             display: flex;
             width: 500%;
 
             animation: slide 20s infinite ease-in-out;
         }
 
-        #goldenempirerooms > .content > .sliderbox > ul > li{
+        #GoldenEmpireRooms > .Content > .SliderBox > ul > li{
             width: 100%;
             list-style: none;
 
@@ -177,15 +234,34 @@ ul{
         }
 
     /*Golden Empire - Servicios*/
-        #goldenempireservices > .content{
+        #GoldenEmpireServices{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background:
+            radial-gradient(35.36% 35.36% at 100% 25%,#0000 66%,#e3cf1c 68% 70%,#0000 72%) 15px 15px/calc(2*15px) calc(2*15px),
+            radial-gradient(35.36% 35.36% at 0    75%,#0000 66%,#e3cf1c 68% 70%,#0000 72%) 15px 15px/calc(2*15px) calc(2*15px),
+            radial-gradient(35.36% 35.36% at 100% 25%,#0000 66%,#e3cf1c 68% 70%,#0000 72%) 0 0/calc(2*15px) calc(2*15px),
+            radial-gradient(35.36% 35.36% at 0    75%,#0000 66%,#e3cf1c 68% 70%,#0000 72%) 0 0/calc(2*15px) calc(2*15px),
+            repeating-conic-gradient(#922031 0 25%,#0000 0 50%) 0 0/calc(2*15px) calc(2*15px),
+            radial-gradient(#0000 66%,#e3cf1c 68% 70%,#0000 72%) 0 calc(15px/2)/15px 15px
+            #922031;
+        }
+
+        #GoldenEmpireServices > .Content{
             height: 80%;
             width: 80%;
             
+            background: #353636d0;
+            box-shadow: 0px 0px 20px #353636d0;
+            border-radius: 10px;
+
             display: grid;
             grid-template: repeat(5, 1fr) / repeat(6, 1fr);
         }
 
-        #goldenempireservices > .content > h2{
+        #GoldenEmpireServices > .Content > h2{
             grid-column: span 6;
             grid-row: span 1;
 
@@ -194,107 +270,118 @@ ul{
             align-items: center;
         }
 
-        #goldenempireservices > .content > .info{
+        #GoldenEmpireServices > .Content > .Info{
             grid-column: span 2;
             grid-row: span 2;
         }
 
-        #goldenempireservices > .content > .info:nth-child(5), #goldenempireservices > .content > .info:nth-child(6){
+        #GoldenEmpireServices > .Content > .Info:nth-child(5), #GoldenEmpireServices > .Content > .Info:nth-child(6){
             grid-column: span 3;
         }
 
 /*Espacio Para Reservar*/
-#reserve{
-    background: #353636;
-    color: whitesmoke;
-}
+    #Reserve{
+        background: #353636;
+        color: whitesmoke;
 
-#reserve > h2{
-    height: 20%;
-    width: 100%;
-}
+        background:
+        radial-gradient(35.36% 35.36% at 100% 25%,#0000 66%,#e3cf1c 68% 70%,#0000 72%) 15px 15px/calc(2*15px) calc(2*15px),
+        radial-gradient(35.36% 35.36% at 0    75%,#0000 66%,#e3cf1c 68% 70%,#0000 72%) 15px 15px/calc(2*15px) calc(2*15px),
+        radial-gradient(35.36% 35.36% at 100% 25%,#0000 66%,#e3cf1c 68% 70%,#0000 72%) 0 0/calc(2*15px) calc(2*15px),
+        radial-gradient(35.36% 35.36% at 0    75%,#0000 66%,#e3cf1c 68% 70%,#0000 72%) 0 0/calc(2*15px) calc(2*15px),
+        repeating-conic-gradient(#922031 0 25%,#0000 0 50%) 0 0/calc(2*15px) calc(2*15px),
+        radial-gradient(#0000 66%,#e3cf1c 68% 70%,#0000 72%) 0 calc(15px/2)/15px 15px #922031;
 
-#reserve > form{
-    height: 80%;
-    width: 80%;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+    }
 
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: space-between;
-    align-items: space-around;
+    #Reserve > h2{
+        height: 20%;
+        width: 100%;
 
-    padding: 4%;
-}
+        background: #353636d0;
+    }
 
-#reserve > form > .row{
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    align-items: center;
-}
+    #Reserve > form{
+        height: 80%;
+        width: 100%;
 
-#reserve > form > .row > .column{
-    flex-basis: 50%;
+        background: #353636d0;
 
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: space-between;
-    align-items: space-around;
-}
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-between;
+        align-items: space-evenly;
 
-textarea{
-    resize: vertical;
-}
+        padding: 4% 15%;
+    }
+
+    textarea{
+        resize: vertical;
+    }
 
 /*Footer*/
-footer{
-    height: 20vh;
-    width: 100%;
+    footer{
+        height: 20vh;
+        width: 100%;
 
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-    justify-content: space-around;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-content: space-around;
 
-    background: #922031;
-    font-weight: bolder;
-    color: whitesmoke;
-}
+        background: #922031;
+        font-weight: bolder;
+        color: #e3cf1c;
+    }
+
+    footer > a{
+        text-decoration: none;
+        color: #e3cf1c;
+    }
 
 /*Animaciones*/
     /*Animación de los carruseles*/
-    @keyframes slide{
-        0%{
-            margin-left: 0;
+        @keyframes slide{
+            0%{
+                margin-left: 0;
+            }
+            15%{
+                margin-left: 0;
+            }
+            20%{
+                margin-left: -100%;
+            }
+            35%{
+                margin-left: -100%;
+            }
+            40%{
+                margin-left: -200%;
+            }
+            55%{
+                margin-left: -200%;
+            }
+            60%{
+                margin-left: -300%;
+            }
+            75%{
+                margin-left: -300%;
+            }
+            80%{
+                margin-left: -400%;
+            }
+            95%{
+                margin-left: -400%;
+            }
+            100%{
+                margin-left: 0%;
+            }
         }
-        15%{
-            margin-left: 0;
+
+    /*Smooth Scroll*/
+        html {
+            scroll-behavior: smooth;
         }
-        20%{
-            margin-left: -100%;
-        }
-        35%{
-            margin-left: -100%;
-        }
-        40%{
-            margin-left: -200%;
-        }
-        55%{
-            margin-left: -200%;
-        }
-        60%{
-            margin-left: -300%;
-        }
-        75%{
-            margin-left: -300%;
-        }
-        80%{
-            margin-left: -400%;
-        }
-        95%{
-            margin-left: -400%;
-        }
-        100%{
-            margin-left: 0%;
-        }
-    }
