@@ -15,37 +15,27 @@ body{
     font-family: "Open Sans";
 }
 
-.pagerow{
+.PageRow{
     height: 100vh;
     width: 100%;
 
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: center;
+    overflow: hidden;
 }
 
-.content{
+.Content{
     display: flex;
     flex-flow: column wrap;
     justify-content: space-around;
-    align-items: space-around;
 }
 
-.row{
+.Row{
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
 }
 
-.info{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.anchor{
+.Info{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -55,12 +45,16 @@ h1{
     display: flex;
     justify-content: center;
     align-items: center;
+
+    padding-left: 5%;
 }
 
 h2{
     display: flex;
     justify-content: center;
     align-items: center;
+
+    font-size: 25pt;
 }
 
 h3{
@@ -71,177 +65,264 @@ h3{
 
 p{
     text-align: justify;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    padding: 0px 5%;
 }
 
-a{
-    text-align: center;
-    text-decoration: none;
-
-    height: 2vh;
-    width: 10vw;
-
-    color: #D6DFE2;
-}
-
-ul{
-    list-style: none;
+.HTMLAnchor{
+    height: 0;
+    width: 0;
 }
 
 /*Imland*/
-    #imland{
-        color: #D6DFE2;
-    }
+    #Imland{
+        background: url(../images/BackgroundImland.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
 
-    #imland > .row:nth-child(1){
-        height: 30%;
-        width: 100%;
+        color: #968d6f;
 
-        flex-flow: column wrap;
+        .Filter{
+            height: 100%;
+            width: 100%;
 
-        background-color: #795632;
-        color: #D6DFE2;
-    }
+            backdrop-filter: blur(5px) grayscale(.5);
 
-    #imland > .row:nth-child(1) > .column{
-        height: 100%;
-        width: 50%;
+            nav{
+                height: 20%;
+                width: 100%;
 
-        display: flex;
-        flex-flow: column wrap;
-        justify-content: center;
-        align-items: flex-start;
+                background: #424939;
 
-        padding: 0 0 3% 3%;
-    }
+                display: flex;
+                align-items: center;
+                justify-content: center;
 
-    #imland > .row:nth-child(1) > nav{
-        height: 100%;
-        width: 50%;
+                .Column{
+                    height: 100%;
+                    width: 30%;
 
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
+                    display: flex;
+                    flex-flow: column wrap;
+                    justify-content: center;
+                    align-items: center;
 
-        padding: 0 3% 3% 0%;
-    }
+                    .Logo{
+                        height: 90%;
+                        width: 50%;
 
-    #imland > .row:nth-child(2){
-        height: 70%;
-        width: 100%;
+                        background: url(../images/LogoImlandPNG.png) no-repeat;
+                        background-size: contain;
+                        background-position: center;
+                    }
 
-        display: flex;
-        justify-content: center;
-        align-items: center;
+                    h1{
+                        height: 31%;
+                        width: 50%;
 
-        background: url();
-    }
+                        justify-content: flex-start;
+                    }
 
-    #imland > .row:nth-child(2) > .content{
-        height: 60%;
-        width: 40%;     
+                    p{
+                        width: 30%;
+                        padding: 1% 1%;
+                    }
+                }
+
+                ul{
+                    height: 100%;
+                    width: 70%;
+                    
+                    list-style: none;
+
+                    display: flex;
+                    align-items: center;
+
+                    li{
+                        height: 100%;
+                        width: 20%;
+
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        a{
+                            text-decoration: none;
+                            color: #968d6f;
+                        }
+                    }
+
+                    li:hover{
+                        background: #33382d;
+                    }
+                }
+            }
+
+            .Row:nth-child(2){
+                height: 80%;
+
+                .Content{
+                    height: 50%;
+                    width: 35%;
+
+                    padding: 5%;
+
+                    background-color: #33382ce0;
+                }
+            }
+        }
     }
 
     /*Imland - Habitaciones*/
-        #imlandrooms > .content{
-            height: 70%;
-            width: 70%;
+        #ImlandRooms{
+        background: #dad8d2;
 
-            flex-flow: column wrap;
-        }
-
-        #imlandrooms > .content > h1{
-            height: 20%;
-            width: 100%;
-        }
-
-        #imlandrooms > .content > .sliderbox{
-            height: 80%;
+        .Filter{
+            height: 100%;
             width: 100%;
 
-            overflow: hidden;
-            background: #795632;
-            color: #D6DFE2;
-        }
-
-        #imlandrooms > .content > .sliderbox > ul{
             display: flex;
-            width: 500%;
+            align-items: center;
+            justify-content: center;
 
-            animation: slide 20s infinite ease-in-out;
+            .Content{
+                height: 70%;
+                width: 70%;
+
+                background: #a5b8be;
+                box-shadow: 0px 0px 20px #a5b8bed0;
+                border-radius: 10px;
+
+                color: white;
+
+                flex-flow: column wrap;
+
+                h1{
+                    height: 20%;
+                    width: 100%;
+                }
+
+                .SliderBox{
+                    height: 80%;
+                    width: 100%;
+    
+                    overflow: hidden;
+
+                    > ul{
+                        width: 500%;
+                        height: 100%;
+
+                        display: flex;
+                        list-style: none;
+
+                        animation: slide 20s infinite ease-in-out;
+
+                        > li{
+                            width: 100%;
+                            height: 100%;
+
+                            padding: 1%;
+                            
+                            ul > li{
+                                padding-left: 5%;
+                            }
+                        }
+                    }
+                }
+
+            }
         }
-
-        #imlandrooms > .content > .sliderbox > ul > li{
-            width: 100%;
-            list-style: none;
-
-            padding: 1%;
         }
 
     /*Imland - Servicios*/
-        #imlandservices > .content{
-            height: 80%;
-            width: 80%;
-            
-            display: grid;
-            grid-template: repeat(5, 1fr) / repeat(6, 1fr);
-        }
+        #ImlandServices{
+            background-color: #a5b8be;
 
-        #imlandservices > .content > h2{
-            grid-column: span 6;
-            grid-row: span 1;
-        }
+            display: flex;
+            align-items: center;
+            justify-content: center;
 
-        #imlandservices > .content > .info{
-            grid-column: span 2;
-            grid-row: span 2;
-        }
+            .Content{
+                height: 80%;
+                width: 80%;
+                
+                background: #dad8d2;
+                box-shadow: 1px 1px 20px #dad8d2d0;
 
-        #imlandservices > .content > .info:nth-child(5), #imlandservices > .content > .info:nth-child(6){
-            grid-column: span 3;
+                display: grid;
+                grid-template: repeat(5, 1fr) / repeat(6, 1fr);
+
+                h2{
+                    grid-column: span 6;
+                    grid-row: span 1;
+                }
+
+                .Info{
+                    grid-column: span 2;
+                    grid-row: span 2;
+                }
+
+                .Info:nth-child(5), .Info:nth-child(6){
+                    grid-column: span 3;
+                }
+            }
         }
 
 /*Espacio Para Reservar*/
-#reserve > h2{
-    height: 20%;
-    width: 100%;
-}
-
-#reserve > form{
-    height: 80%;
-    width: 80%;
-
+#Reserve{
     display: flex;
-    flex-flow: column nowrap;
-    justify-content: space-between;
-    align-items: space-around;
-
-    padding: 4%;
-}
-
-#reserve > form > .row{
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
     align-items: center;
-}
+    justify-content: center;
 
-#reserve > form > .row > .column{
-    flex-basis: 50%;
+    height: auto;
 
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: space-between;
-    align-items: space-around;
-}
+    h2{
+        height: 20vh;
+        width: 50%;
+    }
 
-textarea{
-    resize: vertical;
+    form{
+        height: 80%;
+        width: 80%;
+    
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-between;
+        align-items: space-around;
+    
+        padding: 4%;
+
+        input, select{
+            padding: 1%;
+            margin: 1%;
+        }
+
+        button{
+            padding: 2.3%;
+            margin: 1%;
+
+            background-color: #424939;
+            border: none;
+            border-radius: 10px;
+
+            color: #968d6f;
+
+            transition: all .5s;
+        }
+
+        button:hover{
+            background-color: #968d6f;
+
+            font-weight: bolder;
+            color: #424939;
+        }
+
+        label{
+            margin: 1%;
+        }
+
+        textarea{
+            resize: vertical;
+        }
+        
+    }
 }
 
 /*Footer*/
@@ -254,45 +335,57 @@ footer{
     align-items: center;
     justify-content: space-around;
 
-    background-color: #795632;
+    background-color: #424939;
     font-weight: bolder;
-    color: #D6DFE2;
+    color: #968d6f;
+
+    a{
+        text-decoration: none;
+
+        font-weight: bold;
+        color: #968d6f;
+    }
 }
 
 /*Animaciones*/
     /*Animación de los carruseles*/
-    @keyframes slide{
-        0%{
-            margin-left: 0;
+        @keyframes slide{
+            0%{
+                margin-left: 0;
+            }
+            15%{
+                margin-left: 0;
+            }
+            20%{
+                margin-left: -100%;
+            }
+            35%{
+                margin-left: -100%;
+            }
+            40%{
+                margin-left: -200%;
+            }
+            55%{
+                margin-left: -200%;
+            }
+            60%{
+                margin-left: -300%;
+            }
+            75%{
+                margin-left: -300%;
+            }
+            80%{
+                margin-left: -400%;
+            }
+            95%{
+                margin-left: -400%;
+            }
+            100%{
+                margin-left: 0%;
+            }
         }
-        15%{
-            margin-left: 0;
+
+    /*Smooth Scroll*/
+        html {
+            scroll-behavior: smooth;
         }
-        20%{
-            margin-left: -100%;
-        }
-        35%{
-            margin-left: -100%;
-        }
-        40%{
-            margin-left: -200%;
-        }
-        55%{
-            margin-left: -200%;
-        }
-        60%{
-            margin-left: -300%;
-        }
-        75%{
-            margin-left: -300%;
-        }
-        80%{
-            margin-left: -400%;
-        }
-        95%{
-            margin-left: -400%;
-        }
-        100%{
-            margin-left: 0%;
-        }
-    }
