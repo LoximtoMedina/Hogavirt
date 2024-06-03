@@ -147,10 +147,13 @@ p{
                             text-decoration: none;
                             color: #968d6f;
                         }
+
+                        transition: all 0.3s;
                     }
 
                     li:hover{
                         background: #33382d;
+                        font-weight: bolder;
                     }
                 }
             }
@@ -172,11 +175,15 @@ p{
 
     /*Imland - Habitaciones*/
         #ImlandRooms{
-        background: #dad8d2;
+        background:  url(../images/Anexo5.jpg);
+        background-size: cover;
+        background-position: center;
 
         .Filter{
             height: 100%;
             width: 100%;
+
+            background: #33382dd0;
 
             display: flex;
             align-items: center;
@@ -186,11 +193,11 @@ p{
                 height: 70%;
                 width: 70%;
 
-                background: #a5b8be;
+                background: #dad8d2d0;
                 box-shadow: 0px 0px 20px #a5b8bed0;
                 border-radius: 10px;
 
-                color: white;
+                color: black;
 
                 flex-flow: column wrap;
 
@@ -233,34 +240,55 @@ p{
 
     /*Imland - Servicios*/
         #ImlandServices{
-            background-color: #a5b8be;
+            background: url(../images/Anexo4.jpg);
+            background-size: cover;
+            background-position: center;
 
             display: flex;
             align-items: center;
             justify-content: center;
 
-            .Content{
-                height: 80%;
-                width: 80%;
-                
-                background: #dad8d2;
-                box-shadow: 1px 1px 20px #dad8d2d0;
+            .Filter{
+                height: 100%;
+                width: 100%;
 
-                display: grid;
-                grid-template: repeat(5, 1fr) / repeat(6, 1fr);
+                background: #dad8d2d0;
 
-                h2{
-                    grid-column: span 6;
-                    grid-row: span 1;
-                }
+                display: flex;
+                align-items: center;
+                justify-content: center;
 
-                .Info{
-                    grid-column: span 2;
-                    grid-row: span 2;
-                }
+                .Content{
+                    height: 80%;
+                    width: 80%;
+                    
+                    background:  #33382dd0;
+                    box-shadow: 1px 1px 20px #33382dd0;
 
-                .Info:nth-child(5), .Info:nth-child(6){
-                    grid-column: span 3;
+                    color: white;
+
+                    display: grid;
+                    grid-template: repeat(5, 1fr) / repeat(6, 1fr);
+
+                    h2{
+                        grid-column: span 6;
+                        grid-row: span 1;
+                    }
+
+                    .Info{
+                        grid-column: span 2;
+                        grid-row: span 2;
+
+                        ul{
+                            li:nth-child(even){
+                                list-style: none;
+                            }
+                        }
+                    }
+
+                    .Info:nth-child(5), .Info:nth-child(6){
+                        grid-column: span 3;
+                    }
                 }
             }
         }
