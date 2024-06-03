@@ -533,4 +533,43 @@ footer > a{
                 }
             }
         }
+
+        #Services{
+            .Content{
+                display: grid;
+                grid-template: repeat(6, 1fr) / 1fr;
+
+                h2{
+                    grid-column: span 1;
+                    grid-row: span 1;
+                }
+                .Info{
+                    grid-column: span 1;
+                    grid-row: span 1;
+
+                    ul{
+                        width: 50%;
+                        li{
+                            width: 100%;
+                        }
+
+                        li:nth-child(even){
+                            list-style: none;
+                        }
+                    }
+                }
+                .Info:nth-child(5), .Info:nth-child(6){
+                    grid-column: span 1;
+                }
+            }
+        }
+
+        footer{
+            height: 10vh;
+            
+            font-size: 8pt;
+            a{
+                font-size: 10pt;
+            }
+        }
     }
