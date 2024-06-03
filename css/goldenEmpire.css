@@ -620,69 +620,30 @@ a{
                 }
             }
         }
-    }
 
-    #Reserve{
-        h2{
-            height: 12vh;
-        }
-
-        form{
-            label{
-                font-weight: bold;
-                padding: 5% 0;
+        #Reserve{
+            h2{
+                height: 12vh;
             }
-
-            input, select{
-        
-                margin: 1% 5%;
-                padding: 1.5%;
-
-                color: rgb(202, 199, 199);
-            }
-
-            input::placeholder, textarea::placeholder{
-                color: rgb(202, 199, 199);
-            }
-
-            button{
-                padding: 1%;
-                margin-top: 3%;
-
-                border: none;
-                border-radius: 10px;
-                
-                background: #252525;
-                font-weight: bolder;
-                color: white;
-
-                transition: all 0.5s;
-            }
-
-            button:hover{
-                background: white;
-                font-weight: bolder;
-                color: #252525;
+    
+            form{
+                label{
+                    padding: 5% 0;
+                }
+    
+                input, select{
+                    margin: 1% 5%;
+                    padding: 1.5%;
+                }
             }
         }
-
-        textarea{
-            padding: 1.5%;
-
-            resize: vertical;
-
-            outline: none;
-            border: none;
-            border-bottom: 1px solid #bbab1e;
-            background-color: rgba(255, 255, 255, 0);
-        }
-    }
-
-    footer{
-        height: 10vh;
-        
-        font-size: 8pt;
-        a{
-            font-size: 10pt;
+    
+        footer{
+            height: 10vh;
+            
+            font-size: 8pt;
+            a{
+                font-size: 10pt;
+            }
         }
     }
