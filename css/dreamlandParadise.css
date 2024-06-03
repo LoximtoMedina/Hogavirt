@@ -120,7 +120,7 @@ a{
 
     margin-right: 2%;
 
-    background: url(../images/LogoDreamlandParadisePNG.png);
+    background: url(../images/LogoDreamlandParadisePNG.png) no-repeat;
     background-size: contain;
 }
 
@@ -131,10 +131,14 @@ a{
     font-weight: bolder;
     color: #807c36;
 
-    display: none;
+    display: flex;
     flex-flow: column nowrap;
     align-items: flex-end;
     justify-content: center;
+}
+
+#Header > nav > .Menu{
+    display: none;
 }
 
 #Header > .Filter{
@@ -156,10 +160,6 @@ a{
 
     background: #807c36;
     color: #daba79;
-}
-
-#linkdivs{
-    display: none;
 }
 
 /*Dreamland Paradise - AboutUs*/
@@ -428,680 +428,109 @@ footer > a{
         scroll-behavior: smooth;
     }
 
-@media only screen and (min-width: 0px){
-    #Header > nav > div{
-        display: none;
-    }
-}
-
-@media only screen and (min-width: 432px){
-    /*Dreamland Paradise*/
+/*Diseño Responsive Para Tablet*/
+    @media screen and (max-width: 780px){
         #Header{
-            display: flex;
-            flex-flow: column nowrap;
-            justify-content: center;
-            align-items: center;
-    
-    
-            background: url(../images/BackgroundDreamlandParadise.jpg);
-            background-size: cover;
-            background-position: center;
-        }
-    
-        #Header > nav{
-            height: 10%;
-            width: 100%;
-    
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-    
-        #Header > nav > div{
-            height: 100%;
-            width: 5%;
-    
-            margin-right: 2%;
-    
-            background: url(../images/LogoDreamlandParadisePNG.png);
-            background-size: contain;
-        }
-    
-        #Header > nav > a{
-            height: 100%;
-    
-            text-decoration: none;
-            font-weight: bolder;
-            color: #807c36;
-    
-            display: none;
-            flex-flow: column nowrap;
-            align-items: flex-end;
-            justify-content: center;
-        }
-    
-        #Header > .Filter{
-            height: 90%;
-            width: 100%;
-    
-            backdrop-filter: blur(4px);
-    
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-    
-        #Header > .Filter > .Row{
-            height: 20%;
-            width: 100%;
-    
-            justify-content: space-between;
-    
-            background: #807c36;
-            color: #daba79;
-        }
+            nav{
+                transition: all 1s;
 
-        .animate__bounceInUp{
-            display: none;
-        }
-    
-        /*Dreamland Paradise - AboutUs*/
-            #AboutUs{
-                display: flex;
-                flex-flow: column wrap;
+                a, #Logo{
+                    display: none;
+                }
+                .Menu{
+                    height: 100%;
+                    width: 100%;
+
+                    color: #414820;
+                    font-weight: bold;
+                    font-size: 16pt;
+
+                    padding: 0% 5%;
+
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: center;
+                }
+            }
+
+            nav:hover{
+                height: 60vh;
+                width: 100%;
+
+                background-color: #daba79;
+
+                flex-flow: column;
                 justify-content: center;
                 align-items: center;
+
+                padding-top: 2%;
+
+                a{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    text-align: center;
+                    margin: 2%;
+
+                    color: #726f2e;
+                }
+                .Menu{
+                    display: none;
+                }
             }
-    
-            #AboutUs > .Content:nth-child(1){
-                height: 0%;
-                width: 0%;
-    
-                background: url(../images/Anexo1.webp);
-                background-position: left center;
+        }
+    }
+
+/*Responsive para celular*/
+    @media screen and (max-width: 430px){
+        #Header{
+            nav{
+                transition: all 1s;
+
+                a{
+                    display: none;
+                }
+                .Menu{
+                    height: 100%;
+                    width: 100%;
+
+                    color: #414820;
+                    font-weight: bold;
+                    font-size: 16pt;
+
+                    padding: 0% 5%;
+
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: center;
+                }
             }
-    
-    
-            #AboutUs > .Content:nth-child(2){
-                height: 100%;
-                width: 80%;
-            }
-    
-    
-        /*Dreamland Paradise - Rooms*/
-            #Rooms{
-                display: flex;
-                align-items: center;
+
+            nav:hover{
+                height: 60vh;
+                width: 100%;
+
+                background-color: #daba79;
+
+                flex-flow: column;
                 justify-content: center;
-    
-                background:
-                    conic-gradient(at 62.5% 12.5%, #daba79 25%, #0000 0) calc(45px/-8) calc(45px/2),
-                    conic-gradient(at 62.5% 12.5%, #daba79 25%, #0000 0) calc(-3*45px/8) calc(45px/4),
-                    conic-gradient(at 87.5% 62.5%, #daba79 25%, #0000 0) calc(3*45px/8) calc(45px/4),
-                    conic-gradient(at 87.5% 62.5%, #daba79 25%, #0000 0) calc(45px/-8) 0,
-                    conic-gradient(at 25% 12.5%, #daba79 25%, #0000 0) 0 calc(45px/-4),
-                    conic-gradient(at 25% 12.5%, #daba79 25%, #0000 0) calc(45px/-4) 0,
-                    conic-gradient(at 87.5% 87.5%, #daba79 25%, #0000 0) calc(45px/8) 0
-                    #9d7b43;
-                background-size: 45px 45px;
-            }
-    
-        #Rooms > .Content{
-                height: 70%;
-                width: 70%;
-    
-                flex-flow: column wrap;
-    
-                background: white;
-                backdrop-filter: blur(5px);
-                border-radius: 20px;
-    
-                color: #414820;
-            }
-    
-            #Rooms > .Content > h1{
-                height: 20%;
-                width: 100%;
-            }
-    
-            #Rooms > .Content > .SliderBox{
-                height: 80%;
-                width: 100%;
-    
-                overflow: hidden;
-            }
-    
-            #Rooms > .Content > .SliderBox > ul{
-                display: flex;
-                width: 500%;
-    
-                animation: slide 20s infinite ease-in-out;
-            }
-    
-            #Rooms > .Content > .SliderBox > ul > li{
-                width: 100%;
-                list-style: none;
-    
-                padding: 1%;
-            }
-    
-            #Rooms > .Content > .SliderBox li > ul{
-                margin: 1%;
-                padding-left: 3%;
-            }
-    
-        /*Dreamland Paradise - Services*/
-            #Services{
-                background: 
-                    radial-gradient(calc(1.28*32px + 12px/2) at left 50% bottom calc(-.8*32px),#9d7b43 calc(100% - 12px),#daba79 calc(101% - 12px) 100%,#0000 101%) calc(2*32px) calc(-1*calc(1.5*32px + 12px)),
-                    radial-gradient(calc(1.28*32px + 12px/2) at left 50% bottom calc(-.8*32px),#807c36 calc(100% - 12px),#daba79 calc(101% - 12px) 100%,#0000 101%) calc(-1*32px) calc(calc(1.5*32px + 12px)/-2),
-                    radial-gradient(calc(1.28*32px + 12px/2) at left 50% top    calc(-.8*32px),#807c36 calc(100% - 12px),#daba79 calc(101% - 12px) 100%,#0000 101%) 0 calc(1.5*32px + 12px),
-                    radial-gradient(calc(1.28*32px + 12px/2) at left 50% top    calc(-.8*32px),#9d7b43 calc(100% - 12px),#daba79 calc(101% - 12px) 100%,#0000 101%) 32px calc(calc(1.5*32px + 12px)/ 2),
-                    linear-gradient(#9d7b43 50%,#807c36 0);
-                background-size: calc(4*32px) calc(1.5*32px + 12px);
-    
-                display: flex;
                 align-items: center;
-                justify-content: center;
+
+                padding-top: 5%;
+
+                a{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    text-align: center;
+
+                    color: #726f2e;
+                }
+                .Menu{
+                    display: none;
+                }
             }
-    
-            #Services > .Content{
-                height: 80%;
-                width: 80%;
-                
-                background-color: white;
-    
-                display: grid;
-                grid-template: repeat(5, 1fr) / repeat(6, 1fr);
-            }
-    
-            #Services > .Content > h2{
-                grid-column: span 6;
-                grid-row: span 1;
-            }
-    
-            #Services > .Content > .Info{
-                grid-column: span 2;
-                grid-row: span 2;
-            }
-    
-            #Services > .Content > .Info:nth-child(5), #DreamlandParadiseServices > .Content > .Info:nth-child(6){
-                grid-column: span 3;
-            }
-    
-            #Services > .Content > .Info > ul{
-                list-style-type: none;
-            }
-    
-        /*Dreamland Paradise - Reserve*/
-            #Reserve{
-                height:auto;
-    
-                display: flex;
-                flex-flow: column nowrap;
-            }
-    
-            #Reserve h2{
-                height: 20vh;
-                width: 100%;
-    
-                background: #414820;
-    
-                color: white;
-            }
-    
-            #Reserve > form{
-                height: 80%;
-                width: 100%;
-                padding: 4% 10%;
-    
-                display: flex;
-                flex-flow: column nowrap;
-                justify-content: space-between;
-                align-items: space-around;
-            }
-    
-            #Reserve > form label{
-                font-weight: bolder;
-            }
-    
-            #Reserve > form input, #Reserve > form select, #Reserve > form button{
-                padding: 0.5%;
-            }
-    
-            #Reserve > form button{
-                background: #414820;
-                padding: 0.5%;
-                color: white;
-    
-                border: none;
-                border-radius: 10px;
-            }
-    
-            #Reserve > form button:hover{
-                background: #726f2e;
-            }    
-    
-            #Reserve > form *{
-                margin-bottom: 1%;
-            }
-    
-            #Reserve > form > .row{
-                display: flex;
-                flex-flow: row nowrap;
-                justify-content: space-between;
-                align-items: center;
-            }
-    
-            #Reserve > form > .row > .column{
-                flex-basis: 50%;
-    
-                display: flex;
-                flex-flow: column nowrap;
-                justify-content: space-between;
-                align-items: space-around;
-            }
-    
-            textarea{
-                resize: vertical;
-            }
-    
-    /*Footer*/
-        footer{
-            height: 20vh;
-            width: 100%;
-    
-            background: #414820;
-    
-            display: flex;
-            flex-flow: column nowrap;
-            align-items: center;
-            justify-content: space-around;
-    
-            color: white;
         }
-    
-        footer > a{
-            text-decoration: none;
-            color: white;
-    
-            font-weight: bold;
-        }
-    
-    /*Animaciones*/
-        /*Animación de los carruseles*/
-            @keyframes slide{
-                0%{
-                    margin-left: 0;
-                }
-                15%{
-                    margin-left: 0;
-                }
-                20%{
-                    margin-left: -100%;
-                }
-                35%{
-                    margin-left: -100%;
-                }
-                40%{
-                    margin-left: -200%;
-                }
-                55%{
-                    margin-left: -200%;
-                }
-                60%{
-                    margin-left: -300%;
-                }
-                75%{
-                    margin-left: -300%;
-                }
-                80%{
-                    margin-left: -400%;
-                }
-                95%{
-                    margin-left: -400%;
-                }
-                100%{
-                    margin-left: 0%;
-                }
-            }
-    
-        /*Smooth Scroll*/
-            html {
-                scroll-behavior: smooth;
-            }
     }
-
-@media only screen and (min-width: 760px){
-/*Dreamland Paradise*/
-    #Header{
-        display: flex;
-        flex-flow: column nowrap;
-        justify-content: center;
-        align-items: center;
-
-
-        background: url(../images/BackgroundDreamlandParadise.jpg);
-        background-size: cover;
-        background-position: center;
-    }
-
-    #Header > nav{
-        height: 10%;
-        width: 100%;
-
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    #Header > nav > div{
-        height: 100%;
-        width: 5%;
-
-        margin-right: 2%;
-
-        background: url(../images/LogoDreamlandParadisePNG.png);
-        background-size: contain;
-    }
-
-    #Header > nav > a{
-        height: 100%;
-
-        text-decoration: none;
-        font-weight: bolder;
-        color: #807c36;
-
-        display: flex;
-        flex-flow: column nowrap;
-        align-items: flex-end;
-        justify-content: center;
-    }
-
-    #Header > .Filter{
-        height: 90%;
-        width: 100%;
-
-        backdrop-filter: blur(4px);
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    #Header > .Filter > .Row{
-        height: 20%;
-        width: 100%;
-
-        justify-content: space-between;
-
-        background: #807c36;
-        color: #daba79;
-    }
-
-    /*Dreamland Paradise - AboutUs*/
-        #AboutUs{
-            display: flex;
-            flex-flow: column wrap;
-            justify-content: center;
-            align-items: center;
-        }
-
-        #AboutUs > .Content:nth-child(1){
-            height: 80%;
-            width: 45%;
-
-            background: url(../images/Anexo1.webp);
-            background-position: left center;
-        }
-
-
-        #AboutUs > .Content:nth-child(2){
-            height: 80%;
-            width: 50%;
-        }
-
-
-    /*Dreamland Paradise - Rooms*/
-        #Rooms{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            background:
-                conic-gradient(at 62.5% 12.5%, #daba79 25%, #0000 0) calc(45px/-8) calc(45px/2),
-                conic-gradient(at 62.5% 12.5%, #daba79 25%, #0000 0) calc(-3*45px/8) calc(45px/4),
-                conic-gradient(at 87.5% 62.5%, #daba79 25%, #0000 0) calc(3*45px/8) calc(45px/4),
-                conic-gradient(at 87.5% 62.5%, #daba79 25%, #0000 0) calc(45px/-8) 0,
-                conic-gradient(at 25% 12.5%, #daba79 25%, #0000 0) 0 calc(45px/-4),
-                conic-gradient(at 25% 12.5%, #daba79 25%, #0000 0) calc(45px/-4) 0,
-                conic-gradient(at 87.5% 87.5%, #daba79 25%, #0000 0) calc(45px/8) 0
-                #9d7b43;
-            background-size: 45px 45px;
-        }
-
-    #Rooms > .Content{
-            height: 70%;
-            width: 70%;
-
-            flex-flow: column wrap;
-
-            background: white;
-            backdrop-filter: blur(5px);
-            border-radius: 20px;
-
-            color: #414820;
-        }
-
-        #Rooms > .Content > h1{
-            height: 20%;
-            width: 100%;
-        }
-
-        #Rooms > .Content > .SliderBox{
-            height: 80%;
-            width: 100%;
-
-            overflow: hidden;
-        }
-
-        #Rooms > .Content > .SliderBox > ul{
-            display: flex;
-            width: 500%;
-
-            animation: slide 20s infinite ease-in-out;
-        }
-
-        #Rooms > .Content > .SliderBox > ul > li{
-            width: 100%;
-            list-style: none;
-
-            padding: 1%;
-        }
-
-        #Rooms > .Content > .SliderBox li > ul{
-            margin: 1%;
-            padding-left: 3%;
-        }
-
-    /*Dreamland Paradise - Services*/
-        #Services{
-            background: 
-                radial-gradient(calc(1.28*32px + 12px/2) at left 50% bottom calc(-.8*32px),#9d7b43 calc(100% - 12px),#daba79 calc(101% - 12px) 100%,#0000 101%) calc(2*32px) calc(-1*calc(1.5*32px + 12px)),
-                radial-gradient(calc(1.28*32px + 12px/2) at left 50% bottom calc(-.8*32px),#807c36 calc(100% - 12px),#daba79 calc(101% - 12px) 100%,#0000 101%) calc(-1*32px) calc(calc(1.5*32px + 12px)/-2),
-                radial-gradient(calc(1.28*32px + 12px/2) at left 50% top    calc(-.8*32px),#807c36 calc(100% - 12px),#daba79 calc(101% - 12px) 100%,#0000 101%) 0 calc(1.5*32px + 12px),
-                radial-gradient(calc(1.28*32px + 12px/2) at left 50% top    calc(-.8*32px),#9d7b43 calc(100% - 12px),#daba79 calc(101% - 12px) 100%,#0000 101%) 32px calc(calc(1.5*32px + 12px)/ 2),
-                linear-gradient(#9d7b43 50%,#807c36 0);
-            background-size: calc(4*32px) calc(1.5*32px + 12px);
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        #Services > .Content{
-            height: 80%;
-            width: 80%;
-            
-            background-color: white;
-
-            display: grid;
-            grid-template: repeat(5, 1fr) / repeat(6, 1fr);
-        }
-
-        #Services > .Content > h2{
-            grid-column: span 6;
-            grid-row: span 1;
-        }
-
-        #Services > .Content > .Info{
-            grid-column: span 2;
-            grid-row: span 2;
-        }
-
-        #Services > .Content > .Info:nth-child(5), #DreamlandParadiseServices > .Content > .Info:nth-child(6){
-            grid-column: span 3;
-        }
-
-        #Services > .Content > .Info > ul{
-            list-style-type: none;
-        }
-
-    /*Dreamland Paradise - Reserve*/
-        #Reserve{
-            height:auto;
-
-            display: flex;
-            flex-flow: column nowrap;
-        }
-
-        #Reserve h2{
-            height: 20vh;
-            width: 100%;
-
-            background: #414820;
-
-            color: white;
-        }
-
-        #Reserve > form{
-            height: 80%;
-            width: 100%;
-            padding: 4% 10%;
-
-            display: flex;
-            flex-flow: column nowrap;
-            justify-content: space-between;
-            align-items: space-around;
-        }
-
-        #Reserve > form label{
-            font-weight: bolder;
-        }
-
-        #Reserve > form input, #Reserve > form select, #Reserve > form button{
-            padding: 0.5%;
-        }
-
-        #Reserve > form button{
-            background: #414820;
-            padding: 0.5%;
-            color: white;
-
-            border: none;
-            border-radius: 10px;
-        }
-
-        #Reserve > form button:hover{
-            background: #726f2e;
-        }    
-
-        #Reserve > form *{
-            margin-bottom: 1%;
-        }
-
-        #Reserve > form > .row{
-            display: flex;
-            flex-flow: row nowrap;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        #Reserve > form > .row > .column{
-            flex-basis: 50%;
-
-            display: flex;
-            flex-flow: column nowrap;
-            justify-content: space-between;
-            align-items: space-around;
-        }
-
-        textarea{
-            resize: vertical;
-        }
-
-/*Footer*/
-    footer{
-        height: 20vh;
-        width: 100%;
-
-        background: #414820;
-
-        display: flex;
-        flex-flow: column nowrap;
-        align-items: center;
-        justify-content: space-around;
-
-        color: white;
-    }
-
-    footer > a{
-        text-decoration: none;
-        color: white;
-
-        font-weight: bold;
-    }
-
-/*Animaciones*/
-    /*Animación de los carruseles*/
-        @keyframes slide{
-            0%{
-                margin-left: 0;
-            }
-            15%{
-                margin-left: 0;
-            }
-            20%{
-                margin-left: -100%;
-            }
-            35%{
-                margin-left: -100%;
-            }
-            40%{
-                margin-left: -200%;
-            }
-            55%{
-                margin-left: -200%;
-            }
-            60%{
-                margin-left: -300%;
-            }
-            75%{
-                margin-left: -300%;
-            }
-            80%{
-                margin-left: -400%;
-            }
-            95%{
-                margin-left: -400%;
-            }
-            100%{
-                margin-left: 0%;
-            }
-        }
-
-    /*Smooth Scroll*/
-        html {
-            scroll-behavior: smooth;
-        }
-}
