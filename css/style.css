@@ -129,6 +129,10 @@
         flex-flow: row nowrap;
         justify-content: space-between;
         align-items: center;
+
+        .Menu{
+            display: None;
+        }
     }
 
     #Header nav > a{
@@ -698,10 +702,53 @@
 
         #Header{
             nav{
+                transition: all 1s;
+
                 a{
                     display: none;
                 }
+                .Menu{
+                    height: 100%;
+                    width: 100%;
+
+                    color: #257E9C;
+                    font-weight: bold;
+                    font-size: 16pt;
+
+                    padding: 0% 5%;
+
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: center;
+                }
             }
+
+            nav:hover{
+                height: 60vh;
+                width: 100%;
+
+                background-color: whitesmoke;
+
+                flex-flow: column;
+                justify-content: center;
+                align-items: center;
+
+                padding-top: 5%;
+
+                a{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    text-align: center;
+
+                    color: #257E9C;
+                }
+                .Menu{
+                    display: none;
+                }
+            }
+
         }
 
         #AboutUs{
